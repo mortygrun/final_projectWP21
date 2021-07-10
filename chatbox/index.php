@@ -89,9 +89,8 @@ else {
                 url: "log.html",
                 cache: false,
                 success: function (html) {
+                    
                     $("#chatbox").html(html);
-
-                    //Auto-scroll
                     var newscrollHeight = $("#chatbox")[0].scrollHeight - 20;
                     if(newscrollHeight > oldscrollHeight){
                         $("#chatbox").animate({ scrollTop: newscrollHeight }, 'normal');
